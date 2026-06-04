@@ -10,6 +10,26 @@ Dự án tập trung vào ba bài toán chính:
 
 > Đây là phiên bản source code công khai phục vụ portfolio. Dữ liệu pháp luật, tài liệu nội bộ, file người dùng tải lên, database backup, API key và dữ liệu vận hành không được đưa vào repository này.
 
+## Hình Ảnh Sản Phẩm
+
+### Trợ lý pháp lý AI
+
+Giao diện hỏi đáp pháp luật Việt Nam bằng ngôn ngữ tự nhiên, hỗ trợ trải nghiệm song ngữ và hội thoại ngay trên trang chủ.
+
+![LawChat-AI legal assistant](assets/screenshots/lawchat-ai-assistant.png)
+
+### Nhập và chuẩn hóa văn bản pháp luật
+
+Quy trình quản trị tài liệu gồm trích xuất nội dung, chỉnh sửa văn bản, chuẩn hóa metadata và chuẩn bị dữ liệu trước khi ingest.
+
+![Legal document ingestion workspace](assets/screenshots/legal-document-ingestion.png)
+
+### Gán nhãn tri thức pháp lý
+
+Workspace phục vụ review cấu trúc điều khoản, thực thể pháp lý, metadata và ground-truth cho quá trình đánh giá retrieval.
+
+![Legal knowledge annotation workspace](assets/screenshots/legal-knowledge-annotation.png)
+
 ## Tôi Đã Xây Dựng Những Gì
 
 ### Trải nghiệm người dùng
@@ -123,15 +143,11 @@ LAWCHAT-AI-Public/
 ### Backend
 
 ```powershell
-cd backend
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
 Copy-Item .env.example .env
-$env:PYTHONPATH='.'
-alembic upgrade head
-uvicorn src.main:app --reload
+.\scripts\start-backend.ps1
 ```
+
+Script sẽ tạo hoặc sử dụng `.venv` riêng của dự án, cài dependency còn thiếu và khởi động API tại `http://127.0.0.1:8000`.
 
 ### Frontend
 

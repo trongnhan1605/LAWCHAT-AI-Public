@@ -12,6 +12,7 @@ httpx
 python-docx
 python-multipart
 pytesseract
+pypdf
 pypdfium2
 Pillow
 psycopg[binary]
