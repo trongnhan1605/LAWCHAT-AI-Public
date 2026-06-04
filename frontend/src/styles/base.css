@@ -1,0 +1,59 @@
+:root {
+  font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  color: #17324d;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.14), transparent 30%),
+    linear-gradient(145deg, #f8fbff 0%, #eef4fb 48%, #e7eef8 100%);
+  line-height: 1.5;
+  font-weight: 400;
+  --font-size-label: 0.72rem;
+  --font-size-caption: 0.8125rem;
+  --font-size-body-sm: 0.9375rem;
+  --font-size-body-md: 1rem;
+  --font-size-heading-sm: 1.125rem;
+  --font-size-heading-md: 1.375rem;
+  --font-size-heading-lg: clamp(1.9rem, 2.4vw, 2.8rem);
+  --font-size-heading-xl: clamp(2.3rem, 3vw, 3.5rem);
+  --font-size-display-lg: clamp(2.9rem, 3.8vw, 4.3rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+select {
+  font: inherit;
+}
+
+body {
+  font-size: var(--font-size-body-md);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 28px;
+}
+

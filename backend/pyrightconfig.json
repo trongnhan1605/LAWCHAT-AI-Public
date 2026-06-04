@@ -1,0 +1,11 @@
+{
+  "include": ["src", "tests", "scripts"],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".git",
+    "build",
+    "dist"
+  ],
+  "typeCheckingMode": "basic"
+}

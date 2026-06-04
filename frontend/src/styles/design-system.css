@@ -1,0 +1,399 @@
+/*
+ * Unified LawChat-AI visual system.
+ * Modern legal portal styling inspired by iLAW's information architecture.
+ */
+
+:root {
+  --lawchat-font-body: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --lawchat-font-heading: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --lawchat-primary: #08766c;
+  --lawchat-primary-dark: #075e57;
+  --lawchat-primary-deep: #064943;
+  --lawchat-primary-soft: #e7f5f2;
+  --lawchat-accent: #e9ad35;
+  --lawchat-accent-hover: #d99b26;
+  --lawchat-ink: #152d2a;
+  --lawchat-muted: #647976;
+  --lawchat-border: #dce8e5;
+  --lawchat-surface: #ffffff;
+  --lawchat-soft: #f3f8f7;
+  --lawchat-danger: #b42318;
+  --lawchat-shadow-sm: 0 8px 24px rgba(14, 55, 51, 0.07);
+  --lawchat-shadow-md: 0 18px 48px rgba(14, 55, 51, 0.12);
+  --lawchat-radius-sm: 6px;
+  --lawchat-radius-md: 8px;
+  --lawchat-radius-lg: 12px;
+  font-family: var(--lawchat-font-body);
+  color: var(--lawchat-ink);
+  background: var(--lawchat-soft);
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--lawchat-font-body);
+}
+
+body {
+  color: var(--lawchat-ink);
+  background: var(--lawchat-soft);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  letter-spacing: 0;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(8, 118, 108, 0.22);
+  outline-offset: 2px;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--lawchat-primary);
+}
+
+.brand-lockup strong,
+.hero-copy h1,
+.section-block h2,
+.site-footer strong,
+.legal-articles-heading h2,
+.lawyer-card strong,
+.legal-article-card strong,
+.hero-search-input strong,
+.primary-button,
+.secondary-button,
+.ghost-button {
+  font-family: var(--lawchat-font-heading);
+}
+
+.brand-mark,
+.widget-brand-mark,
+.chatgpt-logo-mark {
+  background: var(--lawchat-primary);
+  color: #ffffff;
+}
+
+.brand-mark {
+  border-radius: var(--lawchat-radius-md);
+  box-shadow: 0 8px 20px rgba(8, 118, 108, 0.22);
+}
+
+.site-header {
+  border-bottom-color: var(--lawchat-border);
+  box-shadow: 0 4px 22px rgba(14, 55, 51, 0.06);
+}
+
+.site-nav a,
+.site-nav button {
+  color: #304a46;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav button:hover,
+.site-nav button.active,
+.site-login-link {
+  color: var(--lawchat-primary-dark) !important;
+}
+
+.site-login-link {
+  padding: 9px 14px;
+  border: 1px solid var(--lawchat-border) !important;
+  border-radius: var(--lawchat-radius-sm);
+  background: var(--lawchat-primary-soft) !important;
+}
+
+.lang-toggle {
+  border-color: var(--lawchat-border);
+  border-radius: var(--lawchat-radius-md);
+  background: var(--lawchat-soft);
+}
+
+.lang-toggle button {
+  border-radius: var(--lawchat-radius-sm);
+  color: var(--lawchat-muted);
+}
+
+.lang-toggle button.active {
+  background: var(--lawchat-primary);
+  color: #ffffff;
+}
+
+.hero-shell {
+  background:
+    linear-gradient(90deg, rgba(6, 73, 67, 0.96), rgba(8, 118, 108, 0.84)),
+    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-kicker {
+  color: #ffdf9c;
+  font-weight: 700;
+}
+
+.hero-copy h1 {
+  max-width: 720px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero-search-card {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--lawchat-radius-lg);
+  box-shadow: 0 28px 70px rgba(4, 39, 36, 0.26);
+}
+
+.hero-search-row,
+.metric-card,
+.mega-menu-action,
+.legal-service-strip button,
+.lawyer-card,
+.legal-article-card,
+.section-block,
+.site-footer,
+.auth-card {
+  border-color: var(--lawchat-border);
+}
+
+.primary-button {
+  border-color: var(--lawchat-accent);
+  background: var(--lawchat-accent);
+  color: #2d250f;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(233, 173, 53, 0.2);
+}
+
+.primary-button:hover:not(:disabled) {
+  border-color: var(--lawchat-accent-hover);
+  background: var(--lawchat-accent-hover);
+  box-shadow: 0 10px 24px rgba(217, 155, 38, 0.26);
+  transform: translateY(-1px);
+}
+
+.secondary-button,
+.ghost-button {
+  border-color: var(--lawchat-border);
+  background: #ffffff;
+  color: var(--lawchat-primary-dark);
+}
+
+.secondary-button:hover:not(:disabled),
+.ghost-button:hover:not(:disabled) {
+  border-color: #9ccdc7;
+  background: var(--lawchat-primary-soft);
+}
+
+.hero-tabs button.active {
+  color: var(--lawchat-primary-dark);
+  box-shadow: inset 0 -3px 0 var(--lawchat-primary);
+}
+
+.hero-search-input span,
+.service-icon,
+.stat-icon,
+.lawyer-avatar,
+.legal-article-card span {
+  background: var(--lawchat-primary-soft);
+  color: var(--lawchat-primary-dark);
+}
+
+.metric-card:hover,
+.legal-service-strip button:hover,
+.lawyer-card:hover,
+.legal-article-card:hover {
+  border-color: #9ccdc7;
+  box-shadow: var(--lawchat-shadow-md);
+  transform: translateY(-2px);
+}
+
+.legal-service-strip button,
+.mega-menu-topic-grid > button,
+.legal-articles-heading span,
+.section-label,
+.stat-tile strong,
+.expert-score strong {
+  color: var(--lawchat-primary-dark);
+}
+
+.lawyer-card,
+.legal-article-card,
+.section-block,
+.site-footer {
+  box-shadow: var(--lawchat-shadow-sm);
+}
+
+.lawyer-meta-row span {
+  background: var(--lawchat-soft);
+  color: #405b57;
+}
+
+.mega-menu-panel {
+  border-top-color: var(--lawchat-accent);
+  box-shadow: var(--lawchat-shadow-md);
+}
+
+.mega-menu-category-list button.active,
+.mega-menu-category-list button:hover {
+  background: var(--lawchat-primary-soft);
+  color: var(--lawchat-primary-dark);
+}
+
+.chat-widget-topbar,
+.widget-status-strip,
+.widget-circle-launcher,
+.widget-send-action,
+.workspace-send-button {
+  border-color: var(--lawchat-primary);
+  background: var(--lawchat-primary);
+  color: #ffffff;
+}
+
+.widget-circle-launcher,
+.workspace-send-button {
+  box-shadow: 0 12px 30px rgba(8, 118, 108, 0.28);
+}
+
+.message-bubble.user {
+  background: var(--lawchat-primary);
+  color: #ffffff;
+}
+
+.message-bubble.assistant,
+.widget-welcome {
+  border-color: var(--lawchat-border);
+}
+
+.widget-messages {
+  background: var(--lawchat-soft);
+}
+
+.chatgpt-workspace-shell,
+.admin-sidebar,
+.chatgpt-sidebar,
+.admin-hero-card {
+  background: var(--lawchat-primary-deep);
+}
+
+.chatgpt-logo-button,
+.chatgpt-conversation-item,
+.admin-nav-group-button,
+.admin-nav-item,
+.chatgpt-sidebar-brand-row {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.chatgpt-conversation-item.active,
+.admin-nav-item.active {
+  border-color: var(--lawchat-accent);
+  background: rgba(255, 255, 255, 0.13);
+  box-shadow: inset 3px 0 0 var(--lawchat-accent);
+}
+
+.chatgpt-chat-stage,
+.admin-content,
+.admin-dashboard-shell-modern {
+  background: var(--lawchat-soft);
+}
+
+.chatgpt-message-stage,
+.chatgpt-composer-input-wrap,
+.admin-content-top,
+.admin-card,
+.admin-panel,
+.dashboard-card,
+.data-card,
+.ops-card {
+  border-color: var(--lawchat-border);
+}
+
+.auth-shell {
+  background:
+    linear-gradient(135deg, rgba(231, 245, 242, 0.9), rgba(243, 248, 247, 0.96)),
+    radial-gradient(circle at top right, rgba(233, 173, 53, 0.18), transparent 30%);
+}
+
+.auth-card {
+  border-radius: var(--lawchat-radius-lg);
+  box-shadow: var(--lawchat-shadow-md);
+}
+
+.auth-card h1 {
+  color: var(--lawchat-primary-deep);
+  font-weight: 800;
+}
+
+.auth-card input {
+  border-color: var(--lawchat-border);
+  border-radius: var(--lawchat-radius-md);
+}
+
+.auth-card input:focus {
+  border-color: var(--lawchat-primary);
+  box-shadow: 0 0 0 3px rgba(8, 118, 108, 0.12);
+}
+
+.auth-footer a {
+  color: var(--lawchat-primary);
+}
+
+.admin-toolbar-button,
+.admin-filter-input,
+.admin-filter-select,
+.admin-icon-button,
+.admin-pagination-button {
+  border-color: var(--lawchat-border);
+}
+
+.admin-toolbar-button:hover,
+.admin-icon-button:hover,
+.admin-pagination-button:hover {
+  border-color: #9ccdc7;
+  background: var(--lawchat-primary-soft);
+  color: var(--lawchat-primary-dark);
+}
+
+@media (max-width: 720px) {
+  .home-page {
+    padding: 0 0 88px;
+  }
+
+  .site-header {
+    padding: 12px 16px;
+  }
+
+  .hero-shell {
+    padding: 36px 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.35rem;
+  }
+}

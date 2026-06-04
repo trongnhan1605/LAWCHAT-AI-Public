@@ -1,0 +1,65 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+
+# Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Private data and documents
+data/
+docs/
+documents/
+uploads/
+storage/
+exports/
+benchmarks/
+benchmark_reports/
+tessdata/
+annotation*/
+corpus/
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.csv
+*.sql
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+*.rar
+*.7z
+
+# Runtime artifacts
+logs/
+*.log
+tmp/
+temp/
+.tmp-*/
+
+# Editor and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
