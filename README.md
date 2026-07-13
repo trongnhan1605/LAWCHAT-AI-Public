@@ -1,63 +1,63 @@
 # LawChat-AI
 
-LawChat-AI là dự án cá nhân tôi đang phát triển nhằm xây dựng một nền tảng LegalTech ứng dụng AI cho hệ thống pháp luật Việt Nam.
+LawChat-AI is a personal LegalTech project that I am actively developing to explore how AI can support users working with the Vietnamese legal system.
 
-Dự án tập trung vào ba bài toán chính:
+The project focuses on three core goals:
 
-- giúp người dùng đặt câu hỏi pháp lý bằng ngôn ngữ tự nhiên;
-- hỗ trợ tra cứu, phân tích và trả lời dựa trên căn cứ pháp luật;
-- cung cấp công cụ quản trị dữ liệu pháp luật, đánh giá chất lượng và kết nối luật sư khi cần tư vấn chuyên sâu.
+- enabling users to ask legal questions in natural language;
+- retrieving, analyzing, and answering questions with supporting legal authorities;
+- providing tools for legal data administration, quality evaluation, and escalation to legal professionals when expert advice is needed.
 
-> Đây là phiên bản source code công khai phục vụ portfolio. Dữ liệu pháp luật, tài liệu nội bộ, file người dùng tải lên, database backup, API key và dữ liệu vận hành không được đưa vào repository này.
+> This is the public portfolio edition of the project. Legal datasets, internal documents, user uploads, database backups, API keys, and operational data are intentionally excluded from this repository.
 
-## Hình Ảnh Sản Phẩm
+## Product Screenshots
 
-### Trợ lý pháp lý AI
+### AI Legal Assistant
 
-Giao diện hỏi đáp pháp luật Việt Nam bằng ngôn ngữ tự nhiên, hỗ trợ trải nghiệm song ngữ và hội thoại ngay trên trang chủ.
+A natural-language question-and-answer experience for Vietnamese law, with bilingual support and a conversational interface available directly from the home page.
 
 ![LawChat-AI legal assistant](assets/screenshots/lawchat-ai-assistant.png)
 
-### Nhập và chuẩn hóa văn bản pháp luật
+### Legal Document Ingestion and Standardization
 
-Quy trình quản trị tài liệu gồm trích xuất nội dung, chỉnh sửa văn bản, chuẩn hóa metadata và chuẩn bị dữ liệu trước khi ingest.
+An administrative workflow for extracting content, editing documents, standardizing metadata, and preparing legal materials for ingestion.
 
 ![Legal document ingestion workspace](assets/screenshots/legal-document-ingestion.png)
 
-### Gán nhãn tri thức pháp lý
+### Legal Knowledge Annotation
 
-Workspace phục vụ review cấu trúc điều khoản, thực thể pháp lý, metadata và ground-truth cho quá trình đánh giá retrieval.
+A review workspace for validating provision structure, legal entities, metadata, and retrieval ground truth.
 
 ![Legal knowledge annotation workspace](assets/screenshots/legal-knowledge-annotation.png)
 
-## Tôi Đã Xây Dựng Những Gì
+## What I Built
 
-### Trải nghiệm người dùng
+### User Experience
 
-- Landing page LegalTech song ngữ Việt/Anh.
-- Trợ lý pháp lý AI với giao diện hội thoại responsive.
-- Câu trả lời hỗ trợ hiển thị cảnh báo và căn cứ pháp lý.
-- Luồng đăng ký, đăng nhập và phân quyền theo vai trò.
-- Kết nối yêu cầu tư vấn đến luật sư/chuyên viên.
+- A bilingual Vietnamese/English LegalTech landing page.
+- A responsive conversational interface for the AI legal assistant.
+- Answer views that support legal authority references and safety notices.
+- Registration, authentication, and role-based access flows.
+- A workflow for escalating consultation requests to lawyers or legal specialists.
 
-### Hệ thống quản trị
+### Administration System
 
-- Dashboard quản trị văn bản pháp luật, danh mục và người dùng.
-- Quy trình tải lên, trích xuất, chỉnh sửa và ingest tài liệu.
-- Quản lý metadata, điều khoản pháp luật và quan hệ giữa văn bản.
-- Review queue, audit activity và báo cáo chất lượng corpus.
-- Cấu hình AI provider, embedding và graph backend.
+- An administrative dashboard for legal documents, catalogs, and users.
+- Document upload, extraction, editing, and ingestion workflows.
+- Management of metadata, legal provisions, and relationships between documents.
+- Review queues, activity auditing, and corpus quality reporting.
+- Configuration for AI providers, embeddings, and graph backends.
 
-### AI và Legal Retrieval
+### AI and Legal Retrieval
 
-- Retrieval pipeline dành cho dữ liệu pháp luật.
-- Chunking tài liệu theo cấu trúc pháp lý.
-- Lập kế hoạch xử lý câu hỏi, reasoning và validation.
-- Citation-aware answer flow.
-- Cơ chế đánh giá độ tin cậy và đề xuất chuyển chuyên gia.
-- Thử nghiệm knowledge graph với relational database và Neo4j.
+- A retrieval pipeline designed for legal data.
+- Structure-aware chunking for legal documents.
+- Question planning, reasoning, and validation components.
+- A citation-aware answer workflow.
+- Confidence assessment and expert-escalation recommendations.
+- Knowledge graph experiments using relational data and Neo4j.
 
-## Kiến Trúc Tổng Quan
+## High-Level Architecture
 
 ```mermaid
 flowchart LR
@@ -73,33 +73,33 @@ flowchart LR
     INGEST --> DB
 ```
 
-## Công Nghệ Sử Dụng
+## Technology Stack
 
 **Frontend**
 
-- React 19, TypeScript, Vite
-- React Router, Zustand, Axios
+- React 19, TypeScript, and Vite
+- React Router, Zustand, and Axios
 - TipTap rich-text editor
 - Responsive CSS design system
 
 **Backend**
 
-- Python, FastAPI, Pydantic
-- SQLAlchemy, Alembic, PostgreSQL
-- JWT authentication và role-based access control
-- OCR/document extraction với Tesseract, PDFium và python-docx
-- Sentence Transformers, OpenAI-compatible providers
+- Python, FastAPI, and Pydantic
+- SQLAlchemy, Alembic, and PostgreSQL
+- JWT authentication and role-based access control
+- OCR and document extraction with Tesseract, PDFium, and python-docx
+- Sentence Transformers and OpenAI-compatible providers
 - Neo4j integration
 
 **Engineering**
 
-- Service/repository-oriented backend architecture
-- Database migrations
+- Service- and repository-oriented backend architecture
+- Versioned database migrations
 - Automated backend tests
-- Frontend lint và production build verification
-- Privacy-aware public repository workflow
+- Frontend linting and production build verification
+- A privacy-aware public repository workflow
 
-## Cấu Trúc Source Code
+## Source Code Structure
 
 ```text
 LAWCHAT-AI-Public/
@@ -109,7 +109,7 @@ LAWCHAT-AI-Public/
     src/
       agents/            AI-oriented agents
       api/               FastAPI routers
-      core/              Configuration, security and bootstrap
+      core/              Configuration, security, and bootstrap
       ingestion/         Extraction and ingestion pipelines
       models/            SQLAlchemy models
       orchestration/     Case planning and execution flow
@@ -131,23 +131,25 @@ LAWCHAT-AI-Public/
       styles/            Design system and responsive themes
 ```
 
-## Chạy Dự Án
+## Getting Started
 
-### Yêu cầu
+### Prerequisites
 
 - Python 3.11+
 - Node.js 20+
 - PostgreSQL
-- Tesseract OCR nếu cần thử nghiệm OCR
+- Tesseract OCR, if you want to test OCR workflows
 
 ### Backend
+
+From the repository root, run:
 
 ```powershell
 Copy-Item .env.example .env
 .\scripts\start-backend.ps1
 ```
 
-Script sẽ tạo hoặc sử dụng `.venv` riêng của dự án, cài dependency còn thiếu và khởi động API tại `http://127.0.0.1:8000`.
+The script creates or reuses a project-specific `.venv`, installs missing dependencies, and starts the API at `http://127.0.0.1:8000`.
 
 ### Frontend
 
@@ -158,9 +160,9 @@ Copy-Item .env.example .env
 npm run dev
 ```
 
-Frontend mặc định chạy tại `http://localhost:5173`.
+The frontend runs at `http://localhost:5173` by default.
 
-## Kiểm Tra Chất Lượng
+## Quality Checks
 
 ```powershell
 # Backend tests
@@ -174,33 +176,27 @@ npm run lint
 npm run build
 ```
 
-## Trạng Thái Phát Triển
+## Development Status
 
-Dự án đang được tiếp tục phát triển. Các hướng cải tiến hiện tại:
+LawChat-AI is under active development. Current areas of improvement include:
 
-- nâng cao chất lượng retrieval và citation;
-- chuẩn hóa dữ liệu pháp luật Việt Nam;
-- đánh giá reasoning bằng benchmark có kiểm soát;
-- hoàn thiện quy trình review bởi chuyên gia;
-- tối ưu trải nghiệm mobile và khả năng tiếp cận.
+- improving retrieval quality and legal citations;
+- standardizing Vietnamese legal data;
+- evaluating reasoning through controlled benchmarks;
+- strengthening expert-review workflows;
+- improving mobile usability and accessibility.
 
-## Chính Sách Dữ Liệu Public
+## Public Data Policy
 
-Repository public không bao gồm:
+The public repository does not include:
 
-- corpus và tài liệu pháp luật dùng trong quá trình phát triển;
-- tài liệu yêu cầu, kế hoạch nội bộ và báo cáo dự án;
-- file tải lên, OCR model và dữ liệu annotation;
-- benchmark cases và báo cáo được sinh từ dữ liệu nội bộ;
-- database dump, runtime storage và log;
-- `.env`, API key hoặc thông tin xác thực.
-
-## English Summary
-
-LawChat-AI is an actively developed personal LegalTech project focused on Vietnamese law. It demonstrates full-stack product development, legal document ingestion, retrieval-oriented AI architecture, citation-aware answers, role-based workflows, and an operational admin dashboard.
-
-This public portfolio repository contains source code only. Private legal documents, datasets, internal documentation, credentials, runtime storage, and generated evaluation data are intentionally excluded.
+- the legal corpus or source documents used during development;
+- requirement documents, internal plans, or project reports;
+- user uploads, OCR models, or annotation data;
+- benchmark cases or reports generated from internal data;
+- database dumps, runtime storage, or logs;
+- `.env` files, API keys, or other credentials.
 
 ## Disclaimer
 
-LawChat-AI là sản phẩm thử nghiệm và không thay thế ý kiến tư vấn của luật sư. Nội dung do hệ thống tạo ra cần được kiểm tra trước khi sử dụng trong tình huống thực tế.
+LawChat-AI is an experimental product and is not a substitute for advice from a qualified legal professional. Any content generated by the system should be independently reviewed before it is used in a real-world legal matter.
